@@ -1,6 +1,6 @@
 # Meta Tag Plugin
 
-This is a Meta-Tag Plugin for The Secretary CMS. It adds description & keyword tag to your site.
+This is a Meta-Tag Plugin for [The Secretary CMS](http://thesecretary.org). It adds description & keyword tag to your site.
 
 ## Installation & Usage
 
