@@ -1,11 +1,13 @@
 # Meta Tag Plugin
 
-This is a Meta-Tag Plugin for The Secretary CMS. It adds description & meta tags to your site. Both can be changed in the backend under "settings-general".
+This is a Meta-Tag Plugin for The Secretary CMS. It adds description & keyword tag to your site.
 
+## Installation & Usage
 
-## Installation
+Copy the entire meta folder into you Secretary plugin folder. Insert "call_anchor('meta_frontend');" (without "") into the \<head\> tag of your template.
 
-Copy the entire meta folder into you Secretary plugin folder. Insert "call_anchor('meta_frontend');" (without "") into the <head> of your template.
+Description and Keywords can be changed in the backend under "settings-general".
+
 
 ### changelog
 
