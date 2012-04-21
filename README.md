@@ -1,6 +1,6 @@
 # Meta Tag Plugin
 
-This is a Meta-Tag Plugin for The Secretary CMS. It adds description & meta tags to your site. both can be changed in the backend under "settings-general".
+This is a Meta-Tag Plugin for The Secretary CMS. It adds description & meta tags to your site. Both can be changed in the backend under "settings-general".
 
 
 ## Installation
