@@ -13,6 +13,3 @@ Description and Keywords can be changed in the backend under "settings-general".
 
 - "Use Project Tags as Keyswords" option added under settings general
 - added html linebreak between description and keyword tag
-
-- adds description & keywords tags to site
-- change description & keywords in backend under settings general
