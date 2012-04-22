@@ -109,4 +109,29 @@ function processMetaForm(){
 	}
 
 }
+
+/*
+* get meta tags
+*/
+
+function getMetaData(){
+	global $clerk;
+	
+		//get meta data from database
+	if($clerk->settingExists('site_metaTags')){
+		$meta = array(
+			'description' => $clerk->getSetting('site_metaTags',1),
+			'keywords' => $clerk->getSetting('site_metaTags',2),
+			'project_tags' => $clerk->getSetting('site_metaTags',3)
+			);
+	}else{
+		$meta = array(
+			'description' => '',
+			'keywords' => '',
+			'project_tags' => ''
+			);
+	}
+	
+	return $meta;
+}
 ?>
