@@ -16,8 +16,12 @@
 **/
 
 
-// insert meta data into site 
+/*
+* Render meta tags on site
+*/
+
 hook('meta_frontend', 'addMetaData');	// use this to put the meta tags with call_anchor('meta_frontend'); into your template
+
 
 function addMetaData(){	
 	$meta = getMetaData();
@@ -33,7 +37,11 @@ function addMetaData(){
 	echo $desc."\n".$keys."\n";
 }
 
-// insert meta data into backend settings general
+
+/*
+* insert meta data into backend settings general
+*/
+
 hook('settings-general', 'addMetaSettings');
 
 function addMetaSettings(){
@@ -41,7 +49,11 @@ function addMetaSettings(){
 	hook( "form_process", "processMetaForm" );
 }
 
-// display form in backend setting general
+
+/*
+* display form in backend setting general
+*/
+
 function setMetaForm(){
 	global $manager;
 
@@ -79,7 +91,11 @@ function setMetaForm(){
 	
 }
 
-// save meta data to databse
+
+/*
+* save meta data to databse
+*/
+
 function processMetaForm(){
 	global $manager;
 
