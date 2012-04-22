@@ -17,7 +17,6 @@
 
 
 // insert meta data into site 
-//hook('css_frontend', 'addMetaData'); //inserts meta tags after css tags in html head section
 hook('meta_frontend', 'addMetaData');	// use this to put the meta tags with call_anchor('meta_frontend'); into your template
 
 function addMetaData(){	
@@ -83,40 +82,15 @@ function setMetaForm(){
 // save meta data to databse
 function processMetaForm(){
 	global $manager;
-	
-	$meta = array(
-		'description' => $_POST['description'],
-		'keywords' => $_POST['keywords'],
-		'project_tags' => $_POST['project_tags']
-	);
+
 	
 	// Check if setting already exists 
 	if (!$manager->clerk->settingExists('site_metaTags')){ 
 		// No, it doesn't - create it 
-		$manager->clerk->addSetting( 'site_metaTags', array($meta['description'], $meta['keywords'], $meta['project_tags'])); 
+		$manager->clerk->addSetting( 'site_metaTags', array($_POST['description'], $_POST['keywords'], $_POST['project_tags'])); 
 	}else{
-		$manager->clerk->updateSetting('site_metaTags', array($meta['description'], $meta['keywords'], $meta['project_tags']));
+		$manager->clerk->updateSetting('site_metaTags', array($_POST['description'], $_POST['keywords'], $_POST['project_tags']));
 	}
 
-}
-
-//get meta data from database
-function getMetaData(){
-	global $clerk;
-	
-	if($clerk->settingExists('site_metaTags')){
-		$meta = array(
-			'description' => $clerk->getSetting('site_metaTags',1),
-			'keywords' => $clerk->getSetting('site_metaTags',2),
-			'project_tags' => $clerk->getSetting('site_metaTags',3)
-			);
-	}else{
-		$meta = array(
-			'description' => '',
-			'keywords' => '',
-			'project_tags' => ''
-			);
-	}
-	return $meta;
 }
 ?>
